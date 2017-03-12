@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ReservationViewController.h
 //  Spa
 //
 //  Created by Surendran Thiyagarajan on 3/7/17.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SpaViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface MyReservationsViewController : SpaViewController
 
 @end
-

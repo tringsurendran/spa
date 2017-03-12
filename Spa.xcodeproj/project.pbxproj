@@ -7,14 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490775491E71CB2400BA010B /* NSCalendar+Spa.m in Sources */ = {isa = PBXBuildFile; fileRef = 490775481E71CB2400BA010B /* NSCalendar+Spa.m */; };
+		490775501E71D2BB00BA010B /* SpaDayCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4907754F1E71D2BB00BA010B /* SpaDayCollectionViewCell.m */; };
+		490775531E71EBFA00BA010B /* UIColor+Spa.m in Sources */ = {isa = PBXBuildFile; fileRef = 490775521E71EBFA00BA010B /* UIColor+Spa.m */; };
+		490775561E723C1B00BA010B /* SpaDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 490775551E723C1B00BA010B /* SpaDB.m */; };
+		490775591E723D2E00BA010B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490775581E723D2E00BA010B /* CoreData.framework */; };
+		4907755D1E7241A900BA010B /* NSManagedObjectContext+Spa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4907755C1E7241A900BA010B /* NSManagedObjectContext+Spa.m */; };
+		490775601E7243D500BA010B /* SpaReservationsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 4907755F1E7243D500BA010B /* SpaReservationsRepository.m */; };
+		493FD1371E732E04002C5110 /* MyReservation+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 493FD1341E732E04002C5110 /* MyReservation+CoreDataClass.m */; };
+		493FD1381E732E04002C5110 /* MyReservation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 493FD1361E732E04002C5110 /* MyReservation+CoreDataProperties.m */; };
+		493FD13B1E734372002C5110 /* SpaMyRevervationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 493FD13A1E734372002C5110 /* SpaMyRevervationView.m */; };
+		493FD13E1E748BA3002C5110 /* SpaTimeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 493FD13D1E748BA3002C5110 /* SpaTimeCollectionViewCell.m */; };
 		49F141041E6F4726003B83DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141031E6F4726003B83DF /* main.m */; };
 		49F141071E6F4726003B83DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141061E6F4726003B83DF /* AppDelegate.m */; };
-		49F1410A1E6F4726003B83DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141091E6F4726003B83DF /* ViewController.m */; };
 		49F1410D1E6F4726003B83DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F1410B1E6F4726003B83DF /* Main.storyboard */; };
 		49F1410F1E6F4727003B83DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F1410E1E6F4727003B83DF /* Assets.xcassets */; };
 		49F141121E6F4727003B83DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F141101E6F4727003B83DF /* LaunchScreen.storyboard */; };
 		49F1411D1E6F4727003B83DF /* SpaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F1411C1E6F4727003B83DF /* SpaTests.m */; };
 		49F141281E6F4727003B83DF /* SpaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141271E6F4727003B83DF /* SpaUITests.m */; };
+		49F141371E6F515E003B83DF /* MyReservationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141361E6F515E003B83DF /* MyReservationsViewController.m */; };
+		49F1413A1E6F5CC2003B83DF /* SpaServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141391E6F5CC2003B83DF /* SpaServiceViewController.m */; };
+		49F1413D1E6F5D73003B83DF /* AppTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F1413C1E6F5D73003B83DF /* AppTheme.m */; };
+		49F141401E6F6607003B83DF /* SpaServiceItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F1413F1E6F6607003B83DF /* SpaServiceItems.m */; };
+		49F141431E6F6697003B83DF /* SpaServiceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141421E6F6697003B83DF /* SpaServiceItem.m */; };
+		49F1414A1E6F709E003B83DF /* SpaServiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141491E6F709E003B83DF /* SpaServiceView.m */; };
+		49F1414D1E6F88D0003B83DF /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F1414C1E6F88D0003B83DF /* ScheduleViewController.m */; };
+		49F16B841E706DC000E050E0 /* SpaServiceInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F16B831E706DC000E050E0 /* SpaServiceInfoView.m */; };
+		49F16B871E709A4E00E050E0 /* SpaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F16B861E709A4E00E050E0 /* SpaViewController.m */; };
+		49F16B8A1E70BFFA00E050E0 /* SpaServiceOffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F16B891E70BFFA00E050E0 /* SpaServiceOffer.m */; };
+		49F16B8D1E70E1B000E050E0 /* SpaServiceOfferView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F16B8C1E70E1B000E050E0 /* SpaServiceOfferView.m */; };
+		49FD36A41E731F200046FAAE /* SpaModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49FD36A21E731F200046FAAE /* SpaModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +57,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490775471E71CB2400BA010B /* NSCalendar+Spa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+Spa.h"; sourceTree = "<group>"; };
+		490775481E71CB2400BA010B /* NSCalendar+Spa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+Spa.m"; sourceTree = "<group>"; };
+		4907754E1E71D2BB00BA010B /* SpaDayCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaDayCollectionViewCell.h; sourceTree = "<group>"; };
+		4907754F1E71D2BB00BA010B /* SpaDayCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaDayCollectionViewCell.m; sourceTree = "<group>"; };
+		490775511E71EBFA00BA010B /* UIColor+Spa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Spa.h"; sourceTree = "<group>"; };
+		490775521E71EBFA00BA010B /* UIColor+Spa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Spa.m"; sourceTree = "<group>"; };
+		490775541E723C1B00BA010B /* SpaDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaDB.h; sourceTree = "<group>"; };
+		490775551E723C1B00BA010B /* SpaDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaDB.m; sourceTree = "<group>"; };
+		490775581E723D2E00BA010B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4907755B1E7241A900BA010B /* NSManagedObjectContext+Spa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Spa.h"; sourceTree = "<group>"; };
+		4907755C1E7241A900BA010B /* NSManagedObjectContext+Spa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Spa.m"; sourceTree = "<group>"; };
+		4907755E1E7243D500BA010B /* SpaReservationsRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaReservationsRepository.h; sourceTree = "<group>"; };
+		4907755F1E7243D500BA010B /* SpaReservationsRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaReservationsRepository.m; sourceTree = "<group>"; };
+		493FD1331E732E04002C5110 /* MyReservation+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyReservation+CoreDataClass.h"; sourceTree = "<group>"; };
+		493FD1341E732E04002C5110 /* MyReservation+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyReservation+CoreDataClass.m"; sourceTree = "<group>"; };
+		493FD1351E732E04002C5110 /* MyReservation+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyReservation+CoreDataProperties.h"; sourceTree = "<group>"; };
+		493FD1361E732E04002C5110 /* MyReservation+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyReservation+CoreDataProperties.m"; sourceTree = "<group>"; };
+		493FD1391E734372002C5110 /* SpaMyRevervationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaMyRevervationView.h; sourceTree = "<group>"; };
+		493FD13A1E734372002C5110 /* SpaMyRevervationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaMyRevervationView.m; sourceTree = "<group>"; };
+		493FD13C1E748BA3002C5110 /* SpaTimeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaTimeCollectionViewCell.h; sourceTree = "<group>"; };
+		493FD13D1E748BA3002C5110 /* SpaTimeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaTimeCollectionViewCell.m; sourceTree = "<group>"; };
 		49F140FF1E6F4726003B83DF /* Spa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F141031E6F4726003B83DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		49F141051E6F4726003B83DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		49F141061E6F4726003B83DF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		49F141081E6F4726003B83DF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		49F141091E6F4726003B83DF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		49F1410C1E6F4726003B83DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49F1410E1E6F4727003B83DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F141111E6F4727003B83DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +92,30 @@
 		49F141231E6F4727003B83DF /* SpaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F141271E6F4727003B83DF /* SpaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaUITests.m; sourceTree = "<group>"; };
 		49F141291E6F4727003B83DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F141351E6F515E003B83DF /* MyReservationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyReservationsViewController.h; sourceTree = "<group>"; };
+		49F141361E6F515E003B83DF /* MyReservationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyReservationsViewController.m; sourceTree = "<group>"; };
+		49F141381E6F5CC2003B83DF /* SpaServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaServiceViewController.h; sourceTree = "<group>"; };
+		49F141391E6F5CC2003B83DF /* SpaServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaServiceViewController.m; sourceTree = "<group>"; };
+		49F1413B1E6F5D73003B83DF /* AppTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTheme.h; sourceTree = "<group>"; };
+		49F1413C1E6F5D73003B83DF /* AppTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTheme.m; sourceTree = "<group>"; };
+		49F1413E1E6F6607003B83DF /* SpaServiceItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaServiceItems.h; sourceTree = "<group>"; };
+		49F1413F1E6F6607003B83DF /* SpaServiceItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaServiceItems.m; sourceTree = "<group>"; };
+		49F141411E6F6697003B83DF /* SpaServiceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaServiceItem.h; sourceTree = "<group>"; };
+		49F141421E6F6697003B83DF /* SpaServiceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaServiceItem.m; sourceTree = "<group>"; };
+		49F141481E6F709E003B83DF /* SpaServiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaServiceView.h; sourceTree = "<group>"; };
+		49F141491E6F709E003B83DF /* SpaServiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaServiceView.m; sourceTree = "<group>"; };
+		49F1414B1E6F88D0003B83DF /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		49F1414C1E6F88D0003B83DF /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		49F16B821E706DC000E050E0 /* SpaServiceInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaServiceInfoView.h; sourceTree = "<group>"; };
+		49F16B831E706DC000E050E0 /* SpaServiceInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaServiceInfoView.m; sourceTree = "<group>"; };
+		49F16B851E709A4E00E050E0 /* SpaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaViewController.h; sourceTree = "<group>"; };
+		49F16B861E709A4E00E050E0 /* SpaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaViewController.m; sourceTree = "<group>"; };
+		49F16B881E70BFFA00E050E0 /* SpaServiceOffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaServiceOffer.h; sourceTree = "<group>"; };
+		49F16B891E70BFFA00E050E0 /* SpaServiceOffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaServiceOffer.m; sourceTree = "<group>"; };
+		49F16B8B1E70E1B000E050E0 /* SpaServiceOfferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaServiceOfferView.h; sourceTree = "<group>"; };
+		49F16B8C1E70E1B000E050E0 /* SpaServiceOfferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaServiceOfferView.m; sourceTree = "<group>"; };
+		49FD36A31E731F200046FAAE /* SpaModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpaModel.xcdatamodel; sourceTree = "<group>"; };
+		49FD36A51E7320D80046FAAE /* Spa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spa-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490775591E723D2E00BA010B /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +144,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490775461E71CAB000BA010B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				490775471E71CB2400BA010B /* NSCalendar+Spa.h */,
+				490775481E71CB2400BA010B /* NSCalendar+Spa.m */,
+				490775511E71EBFA00BA010B /* UIColor+Spa.h */,
+				490775521E71EBFA00BA010B /* UIColor+Spa.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		490775571E723D2E00BA010B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				490775581E723D2E00BA010B /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		49F140F61E6F4726003B83DF = {
 			isa = PBXGroup;
 			children = (
+				493FD1331E732E04002C5110 /* MyReservation+CoreDataClass.h */,
+				493FD1341E732E04002C5110 /* MyReservation+CoreDataClass.m */,
+				493FD1351E732E04002C5110 /* MyReservation+CoreDataProperties.h */,
+				493FD1361E732E04002C5110 /* MyReservation+CoreDataProperties.m */,
 				49F141011E6F4726003B83DF /* Spa */,
 				49F1411B1E6F4727003B83DF /* SpaTests */,
 				49F141261E6F4727003B83DF /* SpaUITests */,
 				49F141001E6F4726003B83DF /* Products */,
+				490775571E723D2E00BA010B /* Frameworks */,
+				49FD36A51E7320D80046FAAE /* Spa-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,13 +194,20 @@
 			children = (
 				49F141051E6F4726003B83DF /* AppDelegate.h */,
 				49F141061E6F4726003B83DF /* AppDelegate.m */,
-				49F141081E6F4726003B83DF /* ViewController.h */,
-				49F141091E6F4726003B83DF /* ViewController.m */,
+				49F1413B1E6F5D73003B83DF /* AppTheme.h */,
+				49F1413C1E6F5D73003B83DF /* AppTheme.m */,
+				49F141441E6F700D003B83DF /* Controllers */,
+				49F141471E6F7073003B83DF /* Views */,
+				49F141451E6F703D003B83DF /* Models */,
+				490775461E71CAB000BA010B /* Category */,
+				49FD36B61E7327290046FAAE /* DB Managers */,
+				49FD36B41E7326F60046FAAE /* CoreData */,
 				49F1410B1E6F4726003B83DF /* Main.storyboard */,
 				49F1410E1E6F4727003B83DF /* Assets.xcassets */,
 				49F141101E6F4727003B83DF /* LaunchScreen.storyboard */,
 				49F141131E6F4727003B83DF /* Info.plist */,
 				49F141021E6F4726003B83DF /* Supporting Files */,
+				49FD36A21E731F200046FAAE /* SpaModel.xcdatamodeld */,
 			);
 			path = Spa;
 			sourceTree = "<group>";
@@ -138,6 +236,73 @@
 				49F141291E6F4727003B83DF /* Info.plist */,
 			);
 			path = SpaUITests;
+			sourceTree = "<group>";
+		};
+		49F141441E6F700D003B83DF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49F141351E6F515E003B83DF /* MyReservationsViewController.h */,
+				49F141361E6F515E003B83DF /* MyReservationsViewController.m */,
+				49F141381E6F5CC2003B83DF /* SpaServiceViewController.h */,
+				49F141391E6F5CC2003B83DF /* SpaServiceViewController.m */,
+				49F1414B1E6F88D0003B83DF /* ScheduleViewController.h */,
+				49F1414C1E6F88D0003B83DF /* ScheduleViewController.m */,
+				49F16B851E709A4E00E050E0 /* SpaViewController.h */,
+				49F16B861E709A4E00E050E0 /* SpaViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		49F141451E6F703D003B83DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49F1413E1E6F6607003B83DF /* SpaServiceItems.h */,
+				49F1413F1E6F6607003B83DF /* SpaServiceItems.m */,
+				49F141411E6F6697003B83DF /* SpaServiceItem.h */,
+				49F141421E6F6697003B83DF /* SpaServiceItem.m */,
+				49F16B881E70BFFA00E050E0 /* SpaServiceOffer.h */,
+				49F16B891E70BFFA00E050E0 /* SpaServiceOffer.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		49F141471E6F7073003B83DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49F141481E6F709E003B83DF /* SpaServiceView.h */,
+				49F141491E6F709E003B83DF /* SpaServiceView.m */,
+				49F16B821E706DC000E050E0 /* SpaServiceInfoView.h */,
+				49F16B831E706DC000E050E0 /* SpaServiceInfoView.m */,
+				49F16B8B1E70E1B000E050E0 /* SpaServiceOfferView.h */,
+				49F16B8C1E70E1B000E050E0 /* SpaServiceOfferView.m */,
+				4907754E1E71D2BB00BA010B /* SpaDayCollectionViewCell.h */,
+				4907754F1E71D2BB00BA010B /* SpaDayCollectionViewCell.m */,
+				493FD1391E734372002C5110 /* SpaMyRevervationView.h */,
+				493FD13A1E734372002C5110 /* SpaMyRevervationView.m */,
+				493FD13C1E748BA3002C5110 /* SpaTimeCollectionViewCell.h */,
+				493FD13D1E748BA3002C5110 /* SpaTimeCollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		49FD36B41E7326F60046FAAE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4907755B1E7241A900BA010B /* NSManagedObjectContext+Spa.h */,
+				4907755C1E7241A900BA010B /* NSManagedObjectContext+Spa.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		49FD36B61E7327290046FAAE /* DB Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4907755E1E7243D500BA010B /* SpaReservationsRepository.h */,
+				4907755F1E7243D500BA010B /* SpaReservationsRepository.m */,
+				490775541E723C1B00BA010B /* SpaDB.h */,
+				490775551E723C1B00BA010B /* SpaDB.m */,
+			);
+			name = "DB Managers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +372,7 @@
 				TargetAttributes = {
 					49F140FE1E6F4726003B83DF = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					49F141171E6F4727003B83DF = {
@@ -273,9 +439,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49F1410A1E6F4726003B83DF /* ViewController.m in Sources */,
+				493FD13E1E748BA3002C5110 /* SpaTimeCollectionViewCell.m in Sources */,
+				493FD1381E732E04002C5110 /* MyReservation+CoreDataProperties.m in Sources */,
 				49F141071E6F4726003B83DF /* AppDelegate.m in Sources */,
+				49F16B8A1E70BFFA00E050E0 /* SpaServiceOffer.m in Sources */,
+				49FD36A41E731F200046FAAE /* SpaModel.xcdatamodeld in Sources */,
+				490775601E7243D500BA010B /* SpaReservationsRepository.m in Sources */,
+				493FD13B1E734372002C5110 /* SpaMyRevervationView.m in Sources */,
 				49F141041E6F4726003B83DF /* main.m in Sources */,
+				490775491E71CB2400BA010B /* NSCalendar+Spa.m in Sources */,
+				49F16B8D1E70E1B000E050E0 /* SpaServiceOfferView.m in Sources */,
+				49F16B841E706DC000E050E0 /* SpaServiceInfoView.m in Sources */,
+				49F141401E6F6607003B83DF /* SpaServiceItems.m in Sources */,
+				49F16B871E709A4E00E050E0 /* SpaViewController.m in Sources */,
+				4907755D1E7241A900BA010B /* NSManagedObjectContext+Spa.m in Sources */,
+				49F141371E6F515E003B83DF /* MyReservationsViewController.m in Sources */,
+				490775561E723C1B00BA010B /* SpaDB.m in Sources */,
+				49F1413A1E6F5CC2003B83DF /* SpaServiceViewController.m in Sources */,
+				49F1413D1E6F5D73003B83DF /* AppTheme.m in Sources */,
+				49F1414D1E6F88D0003B83DF /* ScheduleViewController.m in Sources */,
+				493FD1371E732E04002C5110 /* MyReservation+CoreDataClass.m in Sources */,
+				49F1414A1E6F709E003B83DF /* SpaServiceView.m in Sources */,
+				490775501E71D2BB00BA010B /* SpaDayCollectionViewCell.m in Sources */,
+				49F141431E6F6697003B83DF /* SpaServiceItem.m in Sources */,
+				490775531E71EBFA00BA010B /* UIColor+Spa.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,10 +609,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Spa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.suren.Spa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spa-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -433,10 +625,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Spa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.suren.Spa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spa-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -505,6 +701,7 @@
 				49F1412E1E6F4727003B83DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49F1412F1E6F4727003B83DF /* Build configuration list for PBXNativeTarget "SpaTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +710,7 @@
 				49F141311E6F4727003B83DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49F141321E6F4727003B83DF /* Build configuration list for PBXNativeTarget "SpaUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,8 +719,22 @@
 				49F141341E6F4727003B83DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		49FD36A21E731F200046FAAE /* SpaModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				49FD36A31E731F200046FAAE /* SpaModel.xcdatamodel */,
+			);
+			currentVersion = 49FD36A31E731F200046FAAE /* SpaModel.xcdatamodel */;
+			path = SpaModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 49F140F71E6F4726003B83DF /* Project object */;
 }
