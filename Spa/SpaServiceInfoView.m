@@ -59,12 +59,11 @@
         
         self.partySizeCountButton = [[UIButton alloc] initWithFrame:CGRectZero];
         [self.partySizeCountButton.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:11]];
-        [self.partySizeCountButton setTitle:@"1" forState:UIControlStateNormal];
         [self.partySizeCountButton setTitleColor:[UIColor colorWithRed:125.0/255.0 green:125.0/255.0 blue:125.0/255.0 alpha:1.0] forState:UIControlStateNormal];
         self.partySizeCountButton.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:self.partySizeCountButton];
         [self.partySizeCountButton addTarget:self action:@selector(partySizeCountButtonAction) forControlEvents:UIControlEventTouchUpInside];
-        
+        self.partySize = @1;
         
         NSDictionary *views = @{@"imageView" : imageView, @"label" : label, @"separator" : separator, @"descriptionLabel" : descriptionLabel, @"partySizeLabel" : partySizeLabel, @"partySizeCountButton" : self.partySizeCountButton} ;
         

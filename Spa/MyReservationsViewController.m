@@ -10,12 +10,14 @@
 #import "SpaServiceViewController.h"
 #import "SpaReservationsRepository.h"
 #import "SpaMyRevervationView.h"
+#import "SpaDB.h"
 
-@interface MyReservationsViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface MyReservationsViewController () <UICollectionViewDelegate, UICollectionViewDataSource, NSFetchedResultsControllerDelegate>
 
 @property (nonatomic) UICollectionView *collectionView;
 @property (nonatomic) NSArray *reservations;
 @property (nonatomic) SpaReservationsRepository *repository;
+@property (nonatomic) NSFetchedResultsController *fetchedresultsController;
 
 @end
 
@@ -66,8 +68,22 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    self.reservations = [self.repository fetchMyReservations];
+    [self fetchMyReservations];
+    [self.collectionView reloadData];
+}
+
+- (void)fetchMyReservations {
+    NSFetchRequest *fetchRequest = [MyReservation fetchRequest];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES]];
+    self.fetchedresultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[SpaDB sharedInstance].mainContext sectionNameKeyPath:nil cacheName:nil];
+    [self.fetchedresultsController performFetch:nil];
+    self.fetchedresultsController.delegate = self;
+    self.reservations = self.fetchedresultsController.fetchedObjects;
+}
+
+#pragma mark - <NSFetchedResultsControllerDelegate>
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.collectionView reloadData];
 }
 

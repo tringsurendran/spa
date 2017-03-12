@@ -11,6 +11,5 @@
 @interface SpaReservationsRepository : NSObject
 
 - (void)saveReservation:(NSDictionary *)reservationDetails;
-- (NSArray *)fetchMyReservations;
 
 @end

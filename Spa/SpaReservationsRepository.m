@@ -24,12 +24,6 @@
     [context saveAndCascadeToPersistentStore]; // Handle error if any while saving
 }
 
-- (NSArray *)fetchMyReservations {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MyReservation"];
-    NSManagedObjectContext *context = [[SpaDB sharedInstance] mainContext];
-    return [context executeFetchRequest:fetchRequest error:nil];
-}
-
 + (NSString *)getUniqueIdentifier
 {
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
