@@ -79,7 +79,7 @@ CGFloat kScheduleViewControllerViewPadding = 10.0;
 }
 
 - (void)loadTimeCollectionView {
-    // TODO : need to implement dynamic layout to make it perfect
+    // TODO : need to implement dynamic layout to make it perfect spacing
     UICollectionViewFlowLayout *cellLayout = [[UICollectionViewFlowLayout alloc]init];
     cellLayout.itemSize = CGSizeMake(80, 40);
     cellLayout.minimumInteritemSpacing = kScheduleViewControllerViewPadding;
@@ -99,7 +99,7 @@ CGFloat kScheduleViewControllerViewPadding = 10.0;
 - (void)updateReserveButtonState {
     BOOL shouldEnable = NO;
     if ([[self.calendarCollectionView indexPathsForSelectedItems] firstObject] && [[self.timeCollectionView indexPathsForSelectedItems] firstObject]) {
-        shouldEnable = YES;
+        shouldEnable = YES; // should be enabled only after user selects date and time
     }
     if (self.reserveButton.enabled == shouldEnable) {
         return;
@@ -227,13 +227,12 @@ CGFloat kScheduleViewControllerViewPadding = 10.0;
 #pragma mark - <TactPickerViewControllerDelegate>
 
 - (void)pickerViewControllerDidCancel:(SpaPickerViewController *)pickerViewController {
+    [pickerViewController dismissViewControllerAnimated:YES completion:nil];
     self.pickerViewController = nil;
-    self.animationController = nil;
 }
 
 - (void)pickerViewControllerDidSave:(SpaPickerViewController *)pickerViewController {
     self.pickerViewController = nil;
-    self.animationController = nil;
     self.spaServiceInfoView.partySize = pickerViewController.selectedValue;
 }
 

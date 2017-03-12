@@ -91,7 +91,7 @@
 }
 
 -(void)fetchAndUpdateImage {
-    
+    // dummy image
     __weak SpaServiceInfoView *weakSelf = self;
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];

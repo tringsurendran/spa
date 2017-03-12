@@ -60,7 +60,7 @@ static CGFloat const kAnimationDuration = 0.3f;
         self.pickerBottomConstraint.priority = UILayoutPriorityRequired;
         
         [containerView layoutIfNeeded];
-        
+        // animation to bring view from bottom
         [UIView animateWithDuration:kAnimationDuration animations:^{
             self.overlayButton.alpha = 1.f;
             [containerView addConstraint:self.pickerBottomConstraint];
@@ -72,6 +72,7 @@ static CGFloat const kAnimationDuration = 0.3f;
         return;
     }
     
+    // animation to hide view to bottom
     [UIView animateWithDuration:kAnimationDuration animations:^{
         self.overlayButton.alpha = 0.f;
         [containerView removeConstraint:self.pickerBottomConstraint];

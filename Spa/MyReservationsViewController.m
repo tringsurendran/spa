@@ -34,6 +34,7 @@
     [addReservationButton setTintColor:[UIColor whiteColor]];
     self.navigationItem.rightBarButtonItem = addReservationButton;
     
+    // collection view to list out the scheduled reservations
     UICollectionViewFlowLayout *cellLayout = [[UICollectionViewFlowLayout alloc]init];
     cellLayout.itemSize = CGSizeMake(self.view.frame.size.width - 20, 250);
     cellLayout.minimumInteritemSpacing = 10.0;
@@ -73,6 +74,7 @@
 }
 
 - (void)fetchMyReservations {
+    // fetch all reservations
     NSFetchRequest *fetchRequest = [MyReservation fetchRequest];
     fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES]];
     self.fetchedresultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[SpaDB sharedInstance].mainContext sectionNameKeyPath:nil cacheName:nil];
@@ -84,6 +86,7 @@
 #pragma mark - <NSFetchedResultsControllerDelegate>
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    // update collection when there is a update in reservation details
     [self.collectionView reloadData];
 }
 
@@ -103,6 +106,7 @@
 #pragma mark - Actions
 
 - (void)spaService:(id)sender {
+    // push to list of spa service page
     SpaServiceViewController *spaServiceViewController = [[SpaServiceViewController alloc] init];
     [self.navigationController pushViewController:spaServiceViewController animated:YES];
 }

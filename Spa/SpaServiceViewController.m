@@ -21,7 +21,7 @@
 @property (nonatomic) NSArray *spaServicelist;
 @property (nonatomic) NSArray *views;
 @property (nonatomic) NSArray *spaServiceOffers;
-@property (nonatomic) BOOL isAutoScroll;
+@property (nonatomic) BOOL isAutoScroll; // used to detect wether scroll is happening by user or setting content offset
 @property (nonatomic) UIPageControl *pageControl;
 
 
@@ -38,7 +38,6 @@
     self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.scrollView setPagingEnabled:YES];
     [self.scrollView setDirectionalLockEnabled:YES];
-   // [self.scrollView setShowsVerticalScrollIndicator:NO];
     [self.scrollView setShowsHorizontalScrollIndicator:NO];
     [self.scrollView setBackgroundColor:[UIColor lightGrayColor]];
     self.scrollView.delegate = self;
@@ -86,11 +85,12 @@
 }
 
 - (void)loadSpaServiceOfferDetails {
+    // hard coded spaservice offer objects
     self.spaServiceOffers = [NSMutableArray new];
     SpaServiceOffer *offer1 = [[SpaServiceOffer alloc] initWithName:@"Deep Tissue" available:NO index:0];
     SpaServiceOffer *offer2 = [[SpaServiceOffer alloc] initWithName:@"Hot Stone" available:YES index:1];
     SpaServiceOffer *offer3 = [[SpaServiceOffer alloc] initWithName:@"Swedish" available:NO index:2];
-    self.spaServiceOffers = @[offer3,offer1,offer2,offer3,offer1];
+    self.spaServiceOffers = @[offer3,offer1,offer2,offer3,offer1]; // at index (first, last - 1, last) added (last, last, first) objects inserted respectively to acheive circular scrolling
 }
 
 - (void)loadContentForScrollView {
@@ -115,6 +115,7 @@
 }
 
 - (void)resetCurrentView {
+    // resert current view frames and data
     CGFloat pageWidth = self.scrollView.frame.size.width ;
     int page = ceil(self.scrollView.contentOffset.x) / pageWidth;
     SpaServiceOfferView *secondView = [self.views objectAtIndex:(page) % 3];
@@ -125,6 +126,7 @@
 }
 
 - (void)updateViews {
+    // reused views to minimize the memory usage
     CGFloat pageWidth = self.scrollView.frame.size.width ;
     int page = ceil(self.scrollView.contentOffset.x) / pageWidth;
     if (currentPageIndex >= 0 &&  currentPageIndex != page) {
@@ -160,11 +162,13 @@
     }
     CGFloat lastPageX = self.scrollView.bounds.size.width * ([self.spaServiceOffers count] - 1);
     if (self.scrollView.contentOffset.x == 0) {
+        // circular scrolling logic
         currentPageIndex = [self.spaServiceOffers count];
         self.isAutoScroll = YES;
        [self.scrollView setContentOffset:CGPointMake(([self.spaServiceOffers count] - 2) * self.scrollView.frame.size.width, 0)];
         [self resetCurrentView];
     } else if (self.scrollView.contentOffset.x == lastPageX) {
+        // circular scrolling logic
         currentPageIndex = 0;
         self.isAutoScroll = YES;
         [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width, 0)];
@@ -219,6 +223,7 @@
 #pragma mark --
 
 - (void)createSchedule {
+    // push to schedule reservation page
     ScheduleViewController *scheduleViewController = [[ScheduleViewController alloc] init];
     [self.navigationController pushViewController:scheduleViewController animated:YES];
 }

@@ -24,8 +24,7 @@
     [context saveAndCascadeToPersistentStore]; // Handle error if any while saving
 }
 
-+ (NSString *)getUniqueIdentifier
-{
++ (NSString *)getUniqueIdentifier {
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
     CFStringRef string = CFUUIDCreateString(NULL, theUUID);
     CFRelease(theUUID);
