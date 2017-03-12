@@ -64,7 +64,7 @@
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[scrollView]|" options:0 metrics:nil views:@{@"scrollView" : self.scrollView}]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[scrollView]|" options:0 metrics:nil views:@{@"scrollView" : self.scrollView}]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[backgroundView(220)]-20-|" options:0 metrics:nil views:@{@"backgroundView" : backgroundView}]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[backgroundView(220)]-10-|" options:0 metrics:nil views:@{@"backgroundView" : backgroundView}]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[backgroundView]-10-|" options:0 metrics:nil views:@{@"backgroundView" : backgroundView}]];
     [backgroundView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tableView]|" options:0 metrics:nil views:@{@"tableView" : tableView}]];
     [backgroundView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView]|" options:0 metrics:nil views:@{@"tableView" : tableView}]];
