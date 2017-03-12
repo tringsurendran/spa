@@ -18,6 +18,9 @@
 		493FD1381E732E04002C5110 /* MyReservation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 493FD1361E732E04002C5110 /* MyReservation+CoreDataProperties.m */; };
 		493FD13B1E734372002C5110 /* SpaMyRevervationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 493FD13A1E734372002C5110 /* SpaMyRevervationView.m */; };
 		493FD13E1E748BA3002C5110 /* SpaTimeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 493FD13D1E748BA3002C5110 /* SpaTimeCollectionViewCell.m */; };
+		495C8CF91E75D8690039466C /* SpaPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C8CF81E75D8690039466C /* SpaPickerViewController.m */; };
+		495C8CFC1E75DD520039466C /* UIView+Autolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C8CFB1E75DD520039466C /* UIView+Autolayout.m */; };
+		495C8D021E75E2E70039466C /* SpaPickerViewAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C8D011E75E2E70039466C /* SpaPickerViewAnimationController.m */; };
 		49F141041E6F4726003B83DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141031E6F4726003B83DF /* main.m */; };
 		49F141071E6F4726003B83DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141061E6F4726003B83DF /* AppDelegate.m */; };
 		49F1410D1E6F4726003B83DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F1410B1E6F4726003B83DF /* Main.storyboard */; };
@@ -78,6 +81,12 @@
 		493FD13A1E734372002C5110 /* SpaMyRevervationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaMyRevervationView.m; sourceTree = "<group>"; };
 		493FD13C1E748BA3002C5110 /* SpaTimeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaTimeCollectionViewCell.h; sourceTree = "<group>"; };
 		493FD13D1E748BA3002C5110 /* SpaTimeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaTimeCollectionViewCell.m; sourceTree = "<group>"; };
+		495C8CF71E75D8690039466C /* SpaPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaPickerViewController.h; sourceTree = "<group>"; };
+		495C8CF81E75D8690039466C /* SpaPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaPickerViewController.m; sourceTree = "<group>"; };
+		495C8CFA1E75DD520039466C /* UIView+Autolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Autolayout.h"; sourceTree = "<group>"; };
+		495C8CFB1E75DD520039466C /* UIView+Autolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Autolayout.m"; sourceTree = "<group>"; };
+		495C8D001E75E2E70039466C /* SpaPickerViewAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaPickerViewAnimationController.h; sourceTree = "<group>"; };
+		495C8D011E75E2E70039466C /* SpaPickerViewAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaPickerViewAnimationController.m; sourceTree = "<group>"; };
 		49F140FF1E6F4726003B83DF /* Spa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F141031E6F4726003B83DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		49F141051E6F4726003B83DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -151,6 +160,8 @@
 				490775481E71CB2400BA010B /* NSCalendar+Spa.m */,
 				490775511E71EBFA00BA010B /* UIColor+Spa.h */,
 				490775521E71EBFA00BA010B /* UIColor+Spa.m */,
+				495C8CFA1E75DD520039466C /* UIView+Autolayout.h */,
+				495C8CFB1E75DD520039466C /* UIView+Autolayout.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -249,6 +260,10 @@
 				49F1414C1E6F88D0003B83DF /* ScheduleViewController.m */,
 				49F16B851E709A4E00E050E0 /* SpaViewController.h */,
 				49F16B861E709A4E00E050E0 /* SpaViewController.m */,
+				495C8CF71E75D8690039466C /* SpaPickerViewController.h */,
+				495C8CF81E75D8690039466C /* SpaPickerViewController.m */,
+				495C8D001E75E2E70039466C /* SpaPickerViewAnimationController.h */,
+				495C8D011E75E2E70039466C /* SpaPickerViewAnimationController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -456,13 +471,16 @@
 				49F141371E6F515E003B83DF /* MyReservationsViewController.m in Sources */,
 				490775561E723C1B00BA010B /* SpaDB.m in Sources */,
 				49F1413A1E6F5CC2003B83DF /* SpaServiceViewController.m in Sources */,
+				495C8D021E75E2E70039466C /* SpaPickerViewAnimationController.m in Sources */,
 				49F1413D1E6F5D73003B83DF /* AppTheme.m in Sources */,
 				49F1414D1E6F88D0003B83DF /* ScheduleViewController.m in Sources */,
 				493FD1371E732E04002C5110 /* MyReservation+CoreDataClass.m in Sources */,
 				49F1414A1E6F709E003B83DF /* SpaServiceView.m in Sources */,
 				490775501E71D2BB00BA010B /* SpaDayCollectionViewCell.m in Sources */,
 				49F141431E6F6697003B83DF /* SpaServiceItem.m in Sources */,
+				495C8CF91E75D8690039466C /* SpaPickerViewController.m in Sources */,
 				490775531E71EBFA00BA010B /* UIColor+Spa.m in Sources */,
+				495C8CFC1E75DD520039466C /* UIView+Autolayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

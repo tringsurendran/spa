@@ -13,10 +13,12 @@
 #import "SpaDayCollectionViewCell.h"
 #import "SpaReservationsRepository.h"
 #import "SpaTimeCollectionViewCell.h"
+#import "SpaPickerViewController.h"
+#import "SpaPickerViewAnimationController.h"
 
 CGFloat kScheduleViewControllerViewPadding = 10.0;
 
-@interface ScheduleViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface ScheduleViewController () <UICollectionViewDelegate, UICollectionViewDataSource, SpaPickerViewControllerDelegate, UIViewControllerTransitioningDelegate, SpaServiceInfoViewDelegate>
 
 @property (nonatomic) SpaServiceInfoView *spaServiceInfoView;
 @property (nonatomic) UICollectionView *calendarCollectionView;
@@ -24,6 +26,8 @@ CGFloat kScheduleViewControllerViewPadding = 10.0;
 @property (nonatomic) NSArray *dates;
 @property (nonatomic) NSArray *availableTimes;
 @property (nonatomic) UIButton *reserveButton;
+@property (nonatomic) SpaPickerViewController *pickerViewController;
+@property (nonatomic) SpaPickerViewAnimationController *animationController;
 
 @end
 
@@ -35,6 +39,7 @@ CGFloat kScheduleViewControllerViewPadding = 10.0;
     [self.view setBackgroundColor:[UIColor colorWithRed:246.0/255.0 green:246.0/255.0 blue:246.0/255.0 alpha:1]];
 
     self.spaServiceInfoView = [[SpaServiceInfoView alloc] initWithFrame:CGRectMake(kScheduleViewControllerViewPadding, kScheduleViewControllerViewPadding, self.view.bounds.size.width - (kScheduleViewControllerViewPadding * 2), 200)];
+    self.spaServiceInfoView.delegate = self;
     [self.view addSubview:self.spaServiceInfoView];
     
     self.reserveButton = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - 64 - 45, self.view.bounds.size.width, 45)];
@@ -130,7 +135,7 @@ CGFloat kScheduleViewControllerViewPadding = 10.0;
     [dateComponents setHour:getTimeComponents.hour];
     [dateComponents setMinute:getTimeComponents.minute];
     NSDate *selectedDateWithTime = [calendar dateFromComponents:dateComponents];
-    NSDictionary *dictionary = @{@"serviceName" : @"Hot Stone Massage" , @"date" : selectedDateWithTime , @"partySize" : [NSNumber numberWithInt:1]};
+    NSDictionary *dictionary = @{@"serviceName" : @"Hot Stone Massage" , @"date" : selectedDateWithTime , @"partySize" : self.spaServiceInfoView.partySize};
     SpaReservationsRepository *repository = [[SpaReservationsRepository alloc] init];
     [repository saveReservation:dictionary];
     [self.navigationController popToRootViewControllerAnimated:YES];
@@ -194,5 +199,49 @@ CGFloat kScheduleViewControllerViewPadding = 10.0;
     }
     return YES;
 }
+
+- (void)presentPickerView {
+    NSArray *partSizes = @[@1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12];
+    self.pickerViewController = [[SpaPickerViewController alloc] initWithTitle:@"PARTY SIZE" values:partSizes];
+    self.pickerViewController.modalPresentationStyle = UIModalPresentationCustom;
+    self.pickerViewController.transitioningDelegate = self;
+    self.pickerViewController.delegate = self;
+    self.pickerViewController.tintColor = [UIColor spaBlue];
+    self.pickerViewController.selectedValue = self.spaServiceInfoView.partySize;
+    self.animationController = [[SpaPickerViewAnimationController alloc] init];
+    [self presentViewController:self.pickerViewController animated:YES completion:nil];
+}
+
+#pragma mark - <UIViewControllerTransitioningDelegate>
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    self.animationController.presenting = YES;
+    return self.animationController;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    self.animationController.presenting = NO;
+    return self.animationController;
+}
+
+#pragma mark - <TactPickerViewControllerDelegate>
+
+- (void)pickerViewControllerDidCancel:(SpaPickerViewController *)pickerViewController {
+    self.pickerViewController = nil;
+    self.animationController = nil;
+}
+
+- (void)pickerViewControllerDidSave:(SpaPickerViewController *)pickerViewController {
+    self.pickerViewController = nil;
+    self.animationController = nil;
+    self.spaServiceInfoView.partySize = pickerViewController.selectedValue;
+}
+
+#pragma mark - <SpaServiceInfoViewDelegate>
+
+- (void)didTapOnPartySize:(SpaServiceInfoView *)view {
+    [self presentPickerView];
+}
+
 
 @end

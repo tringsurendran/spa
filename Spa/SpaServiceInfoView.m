@@ -10,7 +10,7 @@
 
 @interface SpaServiceInfoView ()
 
-@property (nonatomic) UILabel *partySizeCountLabel;
+@property (nonatomic) UIButton *partySizeCountButton;
 @property (nonatomic) UIImageView *spaImageView;
 
 @end
@@ -57,22 +57,24 @@
         partySizeLabel.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:partySizeLabel];
         
-        self.partySizeCountLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        [self.partySizeCountLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:11]];
-        self.partySizeCountLabel.text = @"1";
-        self.partySizeCountLabel.textColor = [UIColor colorWithRed:125.0/255.0 green:125.0/255.0 blue:125.0/255.0 alpha:1.0];
-        self.partySizeCountLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        [self addSubview:self.partySizeCountLabel];
+        self.partySizeCountButton = [[UIButton alloc] initWithFrame:CGRectZero];
+        [self.partySizeCountButton.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:11]];
+        [self.partySizeCountButton setTitle:@"1" forState:UIControlStateNormal];
+        [self.partySizeCountButton setTitleColor:[UIColor colorWithRed:125.0/255.0 green:125.0/255.0 blue:125.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+        self.partySizeCountButton.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:self.partySizeCountButton];
+        [self.partySizeCountButton addTarget:self action:@selector(partySizeCountButtonAction) forControlEvents:UIControlEventTouchUpInside];
         
         
-        NSDictionary *views = @{@"imageView" : imageView, @"label" : label, @"separator" : separator, @"descriptionLabel" : descriptionLabel, @"partySizeLabel" : partySizeLabel, @"partySizeCountLabel" : self.partySizeCountLabel} ;
+        NSDictionary *views = @{@"imageView" : imageView, @"label" : label, @"separator" : separator, @"descriptionLabel" : descriptionLabel, @"partySizeLabel" : partySizeLabel, @"partySizeCountButton" : self.partySizeCountButton} ;
         
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[imageView(125)]-10-[label]-10-|" options:0 metrics:nil views:views]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageView]|" options:0 metrics:nil views:views]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[label(<=65)]-10-[separator(0.5)]-10-[descriptionLabel]-(>=10@750)-[partySizeLabel]-10@750-|" options:NSLayoutFormatAlignAllLeft metrics:nil views:views]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[imageView]-10-[separator]-10-|" options:0 metrics:nil views:views]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[imageView]-10-[descriptionLabel]-10-|" options:0 metrics:nil views:views]];
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[partySizeLabel]-10-[partySizeCountLabel]|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:views]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[partySizeLabel]-10-[partySizeCountButton(40)]" options:NSLayoutFormatAlignAllCenterY metrics:nil views:views]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[partySizeCountButton(40)]" options:0 metrics:nil views:views]];
 
         [self fetchAndUpdateImage];
 
@@ -80,10 +82,14 @@
     return self;
 }
 
-- (void)updatePartySize:(NSInteger)count {
-    self.partySizeCountLabel.text = [NSString stringWithFormat:@"%ld",(long)count];
+- (void)setPartySize:(NSNumber *)partySize {
+    _partySize = partySize;
+    [self.partySizeCountButton setTitle:[NSString stringWithFormat:@"%@", partySize] forState:UIControlStateNormal];
 }
 
+- (void)partySizeCountButtonAction {
+    [self.delegate didTapOnPartySize:self];
+}
 
 -(void)fetchAndUpdateImage {
     

@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class SpaServiceInfoView;
+
+@protocol SpaServiceInfoViewDelegate <NSObject>
+
+- (void)didTapOnPartySize:(SpaServiceInfoView *)view;
+
+@end
+
 @interface SpaServiceInfoView : UIView
 
-- (void)updatePartySize:(NSInteger)count;
+@property (nonatomic) NSNumber *partySize;
+@property (nonatomic, weak) id <SpaServiceInfoViewDelegate> delegate;
 
 @end
