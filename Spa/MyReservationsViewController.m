@@ -15,7 +15,6 @@
 @interface MyReservationsViewController () <UICollectionViewDelegate, UICollectionViewDataSource, NSFetchedResultsControllerDelegate>
 
 @property (nonatomic) UICollectionView *collectionView;
-@property (nonatomic) NSArray *reservations;
 @property (nonatomic) SpaReservationsRepository *repository;
 @property (nonatomic) NSFetchedResultsController *fetchedresultsController;
 
@@ -80,7 +79,6 @@
     self.fetchedresultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[SpaDB sharedInstance].mainContext sectionNameKeyPath:nil cacheName:nil];
     [self.fetchedresultsController performFetch:nil];
     self.fetchedresultsController.delegate = self;
-    self.reservations = self.fetchedresultsController.fetchedObjects;
 }
 
 #pragma mark - <NSFetchedResultsControllerDelegate>
@@ -93,12 +91,12 @@
 #pragma mark - <UICollectionViewDataSource>
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.reservations count];
+    return [self.fetchedresultsController.fetchedObjects count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SpaMyRevervationView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SpaMyReservationCollectionViewCell" forIndexPath:indexPath];
-    cell.myReservation = [self.reservations objectAtIndex:indexPath.row];
+    cell.myReservation = [self.fetchedresultsController.fetchedObjects objectAtIndex:indexPath.row];
     return cell;
 }
 
